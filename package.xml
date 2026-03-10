@@ -1,0 +1,39 @@
+<?xml-model
+href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"
+?>
+<package format="3">
+<name>my_robot_package</name>
+<version>0.0.0</version>
+<description>Patrol robot package for diploma</description>
+<maintainer email="coll0215@todo.todo">coll0215</maintainer>
+<license>MIT</license>
+<depend>rclpy</depend>
+<depend>rclcpp</depend>
+<depend>std_msgs</depend>
+<depend>geometry_msgs</depend>
+<depend>nav2_msgs</depend>
+<depend>nav2_bringup</depend>
+<depend>nav2_common</depend>
+<depend>nav2_map_server</depend>
+<depend>nav2_amcl</depend>
+<depend>launch</depend>
+<depend>launch_ros</depend>
+<depend>ros_gz_sim</depend>
+<depend>ros_gz_bridge</depend>
+<depend>clearpath_config</depend>
+<depend>clearpath_generator_common</depend>
+<depend>clearpath_generator_gz</depend>
+<depend>rviz2</depend>
+<depend>robot_state_publisher</depend>
+<depend>joint_state_publisher</depend>
+<depend>tf2_ros</depend>
+
+<test_depend>ament_copyright</test_depend>
+<test_depend>ament_flake8</test_depend>
+<test_depend>ament_pep257</test_depend>
+<test_depend>python3-pytest</test_depend>
+
+<export>
+<build_type>ament_python</build_type>
+</export>
+</package>

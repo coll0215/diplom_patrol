@@ -1,0 +1,17 @@
+# Build and install folders
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# Generated files
+generated/
+*.pgm
+*.yaml.bak

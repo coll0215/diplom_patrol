@@ -1,0 +1,7 @@
+image: /home/coll0215/diplom_ws/src/my_robot_package/maps/speed_mask.pgm
+mode: scale
+resolution: 0.03
+origin: [-15.1, -25, 0]
+negate: 0
+occupied_thresh: 1.0
+free_thresh: 0.0
