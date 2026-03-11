@@ -1,4 +1,4 @@
-image: /home/coll0215/diplom_ws/src/my_robot_package/maps/speed_mask.pgm
+image: speed_mask.pgm
 mode: scale
 resolution: 0.03
 origin: [-15.1, -25, 0]

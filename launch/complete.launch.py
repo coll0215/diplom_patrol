@@ -18,7 +18,6 @@ def generate_launch_description():
     speed_mask_file = LaunchConfiguration('speed_mask', 
         default='/home/coll0215/diplom_ws/src/my_robot_package/maps/speed_mask.yaml')
     
-    # Параметры для фильтров
     params_file = LaunchConfiguration('params_file', 
         default=os.path.join(pkg_my_robot, 'config', 'a200', 'filter_common.yaml'))
     
@@ -66,11 +65,13 @@ def generate_launch_description():
         executable='map_server',
         name='speed_filter_mask_server',
         namespace=namespace,
-        parameters=[{
-            'use_sim_time': use_sim_time,
-            'yaml_filename': speed_mask_file,
-            'topic_name': 'speed_filter_mask'
-        }],
+        parameters=[
+            params_file,
+            {
+                'yaml_filename': speed_mask_file,
+                'topic_name': 'speed_filter_mask'
+            }
+        ],
         output='screen'
     )
 
@@ -79,14 +80,7 @@ def generate_launch_description():
         executable='costmap_filter_info_server',
         name='speed_costmap_filter_info_server',
         namespace=namespace,
-        parameters=[{
-            'use_sim_time': use_sim_time,
-            'type': 1,
-            'filter_info_topic': 'speed_costmap_filter_info',
-            'mask_topic': 'speed_filter_mask',
-            'base': 100.0,
-            'multiplier': -1.0
-        }],
+        parameters=[params_file],
         output='screen'
     )
 
@@ -97,7 +91,7 @@ def generate_launch_description():
         namespace=namespace,
         parameters=[{'use_sim_time': use_sim_time},
                     {'autostart': True},
-                    {'node_names': ['/a200_0000/speed_filter_mask_server', '/a200_0000/speed_costmap_filter_info_server']}],
+                    {'node_names': ['speed_filter_mask_server', 'speed_costmap_filter_info_server']}],
         output='screen'
     )
     
