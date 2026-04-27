@@ -30,7 +30,6 @@ def gz_launch(context, *args, **kwargs):
     gz_sim_launch = PathJoinSubstitution(
         [pkg_ros_gz_sim, 'launch', 'gz_sim.launch.py'])
 
-    # ИСПРАВЛЕНО: путь к gui.config в твоём пакете
     gui_config = PathJoinSubstitution(
         [pkg_my_robot, 'config', 'gazebo', 'gui.config'])
 

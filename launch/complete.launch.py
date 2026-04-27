@@ -13,10 +13,10 @@ def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     namespace = LaunchConfiguration('namespace', default='a200_0000')
     setup_path = LaunchConfiguration('setup_path', 
-        default='/home/coll0215/diplom_ws/src/my_robot_package/generated')
+        default='/home/igsp-01/coll0215_ws/src/my_robot_package/generated')
     start_rviz = LaunchConfiguration('start_rviz', default='true')
     speed_mask_file = LaunchConfiguration('speed_mask', 
-        default='/home/coll0215/diplom_ws/src/my_robot_package/maps/speed_mask.yaml')
+        default='/home/igsp-01/coll0215_ws/src/my_robot_package/maps/speed_mask.yaml')
     
     params_file = LaunchConfiguration('params_file', 
         default=os.path.join(pkg_my_robot, 'config', 'a200', 'filter_common.yaml'))
@@ -110,10 +110,10 @@ def generate_launch_description():
         DeclareLaunchArgument('use_sim_time', default_value='true'),
         DeclareLaunchArgument('namespace', default_value='a200_0000'),
         DeclareLaunchArgument('setup_path', 
-            default_value='/home/coll0215/diplom_ws/src/my_robot_package/generated'),
+            default_value='/home/igsp-01/coll0215_ws/src/my_robot_package/generated'),
         DeclareLaunchArgument('start_rviz', default_value='true'),
         DeclareLaunchArgument('speed_mask', 
-            default_value='/home/coll0215/diplom_ws/src/my_robot_package/maps/speed_mask.yaml'),
+            default_value='/home/igsp-01/coll0215_ws/src/my_robot_package/maps/speed_mask.yaml'),
         DeclareLaunchArgument('params_file', 
             default_value=os.path.join(pkg_my_robot, 'config', 'a200', 'filter_common.yaml')),
         
